@@ -1,1 +1,2 @@
-# gale-shapley-algorithm
+# Gale Shapley Algorithm
+----------------------------------
