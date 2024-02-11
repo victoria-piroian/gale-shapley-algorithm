@@ -1,0 +1,50 @@
+-- Project and Select
+CREATE TABLE Q32_students_left_handed AS
+SELECT student, hand_pref, char_name
+FROM Students WHERE hand_pref = "L";
+
+SELECT * FROM Q32_students_left_handed;
+
+-- Project and Select
+CREATE TABLE Q32_students_right_handed AS
+SELECT student, hand_pref, char_name
+FROM Students WHERE hand_pref = "R";
+
+SELECT * FROM Q32_students_right_handed;
+
+-- Theta Join
+CREATE TABLE Q32_young_characters AS
+SELECT "old", char_name AS char_young, hand_pref AS hand_pref_young, age AS age_young, loudness AS loudness_young
+FROM "Characters" JOIN Couples ON young = char_name;
+
+SELECT * FROM Q32_young_characters;
+
+-- Theta Join
+CREATE TABLE Q32_old_characters AS
+SELECT young, char_name AS char_old, hand_pref AS hand_pref_old, age AS age_old, loudness AS loudness_old
+FROM "Characters" JOIN Couples ON "old" = char_name;
+
+SELECT * FROM Q32_old_characters;
+
+CREATE TABLE Q32_couples_hand_pref AS
+SELECT "old", hand_pref_old, age_old, loudness_old, young, hand_pref_young, age_young, loudness_young
+FROM Q32_old_characters, Q32_young_characters
+WHERE young = char_young AND "old" = char_old
+
+SELECT * FROM Q32_couples_hand_pref;
+
+-- Theta Join
+CREATE TABLE Q32_characters_couples_with_diff_hand_pref AS
+SELECT "old", hand_pref_old, age_old, loudness_old, young, hand_pref_young, age_young, loudness_young
+FROM Q32_couples_hand_pref
+WHERE loudness_old = loudness_young;
+
+SELECT * FROM Q32_characters_couples_with_diff_hand_pref;
+
+-- Theta Join
+CREATE TABLE Q32 AS
+SELECT student
+FROM Q32_students_left_handed, Q32_characters_couples_with_diff_hand_pref
+WHERE student = "old" AND student = young;
+
+SELECT * FROM Q32;

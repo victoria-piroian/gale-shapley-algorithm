@@ -1,0 +1,3 @@
+Second Elementary School,-0.25
+Second Middle School,1.5
+Second High School,1

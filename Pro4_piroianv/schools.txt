@@ -1,0 +1,5 @@
+uoft,0.9
+gcvi,0.1
+western,0.5
+waterloo,0.7
+ottawa,0.3

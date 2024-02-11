@@ -1,0 +1,8 @@
+l
+schools1000.txt
+students1000.txt
+p
+m
+d
+r
+q
