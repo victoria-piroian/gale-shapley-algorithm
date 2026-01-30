@@ -238,7 +238,7 @@ public class Pro3_piroianv {
 	}
 		
 	public static boolean assignRankings(ArrayList<Student> S, ArrayList<School> H, int nStudents, int nSchools) {
-		//Get each student’s school rankings and calculate each school’s rankings of students, and return whether or not ranking happened.
+		//Get each studentÂ’s school rankings and calculate each schoolÂ’s rankings of students, and return whether or not ranking happened.
 		// takes as arguments an arrayList of student objects, an arrayList of school objects, the number of schools, and students
 		// returns if ranking has successfully occurred or not
 		
@@ -337,7 +337,7 @@ public class Pro3_piroianv {
 	}
 	
 	 public static void editStudents(ArrayList<Student> S, ArrayList<School> H, int nStudents, boolean rankingsSet) throws NumberFormatException , IOException {
-		 //Sub-area to edit students. The edited student’s regret is updated if needed. Any existing school rankings and regrets are re-calculated after editing a student.
+		 //Sub-area to edit students. The edited studentÂ’s regret is updated if needed. Any existing school rankings and regrets are re-calculated after editing a student.
 		 // takes as arguments an arrayList of student objects, an arrayList of school objects, the number of schools, and students, and a boolean of if rankings are set or not
 		 //returns nothing
 		 
