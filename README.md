@@ -70,8 +70,7 @@ java Pro5_piroianv
 
 ### Regret Definition:
 - Lower regret indicates a better outcome
-
-regret = (rank of assigned partner) - 1
+- regret = (rank of assigned partner) - 1
 
 ### Stability Definition:
 
